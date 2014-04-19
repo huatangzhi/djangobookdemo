@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<title>search authors</title>
+</head>
+<body>
+{% if errors2 %}
+        <ul>
+            {% for error in errors2 %}
+                <li>{{ error }}</li>
+            {% endfor %}
+        </ul>
+        
+    {% endif %}
+    {{author}}
+    <div> Please enter the name of the author.</div>
+    <form action = "/search/" method="get">
+        <input type="text" name="author" size="33">    
+        <input type="submit" value="Search">
+    </form> 
+    
+</body>
+</html>

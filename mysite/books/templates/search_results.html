@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<title>Search_result</title>
+	<p> You searched for : <strong>{{query}}</strong></p>
+	{% if books %}
+	    <p> Found {{books|length}} book {{books|pluralize}} .</p>
+	    
+	 
+	    <ul>
+	        
+	            <li> 
+	            book_name : {{books.title}}
+	            </li>
+	            <li>
+	            book_authors: {{authors}}
+	            </li>
+	            <li>
+	            book_publication_date: {{publication_date}}
+	            </li>
+	            <li>
+	            book_publisher : {{books.publisher}}
+	            </li>
+	       <a href="http://127.0.0.1:8000/main/"> main </a>
+	      
+	    </ul>
+	{% else %}
+	    <p>No books matched your search criteria.</p>
+	{% endif %}
+</head>
+<body>
+
+</body>
+</html>
